@@ -1,0 +1,22 @@
+cd :toc:
+:spring_version: current
+:icons: font
+:source-highlighter: prettify
+:project_id: gs-scheduling-tasks
+
+This guide walks you through the steps for scheduling tasks with Spring.
+
+== Base Taken From
+
+https://github.com/spring-guides/gs-scheduling-tasks
+
+== To use
+
+go into complete directory, make sure that the paths are correct to the scraping files and sql info correct, then:
+'./mvnw spring-boot:run'. 
+
+You will see the springboot log call the java function every two minutes, and that is how we will call the scraping in our app
+
+On my machine this ran robustly for 20 minutes called at two minute intervals.
+
+

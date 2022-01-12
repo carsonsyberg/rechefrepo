@@ -1,0 +1,92 @@
+
+  html{
+    box-sizing: border-box;
+    font-family: Arial;
+  }
+  
+  body {
+    margin: 30px 50px;
+    line-height: 1.4;
+  }
+  
+  
+  .btn {
+    background: #333;
+    color: #fff;
+    padding: .4rem 1rem;
+    text-decoration: none;
+    border: .5rem;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-gap:20px;
+  }
+  
+  /* showcase photo */
+
+  .top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+      'showcase showcase showcase'
+      'showcase showcase showcase';
+  }
+
+  .maincard {
+    background-color: #63B7B7;
+    border-radius: 10px !important;
+    padding: 10px;
+  }
+  
+  .showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(./img/table.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  .showcase h2{
+    text-align:center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .showcase-description {
+    text-align: center;
+    font-size: 1.3em;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  
+  /* boxes */
+  .recipe-boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  
+  .box {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 1.5rem 0.5rem;
+    min-height: 300px;
+  }
+
+  .box p {
+    padding: .6em;
+  }
+
+  .box h2 {
+      font-size: 20px;
+  }
+  

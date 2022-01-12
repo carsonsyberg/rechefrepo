@@ -1,0 +1,28 @@
+https://bytes.com/topic/python/insights/949995-three-ways-run-python-programs-java
+
+https://www.edureka.co/community/358/how-to-execute-a-python-file-with-few-arguments-in-java
+
+https://stackabuse.com/get-http-post-body-in-spring/
+
+just use json parser in springboot;
+https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/json/JsonParser.html
+
+calling python from springboot:
+https://stackoverflow.com/questions/49105473/running-a-python-script-from-spring-boot-web-application-on-embedded-tomcat
+
+
+scheduling:
+
+
+Ensuring not going to be a copy in sql:
+https://stackoverflow.com/questions/1361340/how-can-i-do-insert-if-not-exists-in-mysql
+
+https://dev.mysql.com/doc/refman/8.0/en/insert-on-duplicate.html
+
+https://dev.mysql.com/doc/refman/5.6/en/encryption-functions.html#function_sha2
+
+https://stackoverflow.com/questions/34712665/mysql-sha256-with-insert-statement
+
+ https://www.geeksforgeeks.org/python-mysql-insert-record-if-not-exists-in-table/
+
+

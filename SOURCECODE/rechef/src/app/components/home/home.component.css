@@ -1,0 +1,26 @@
+.home-container {
+    color: black;
+    position: relative;
+    margin: auto;
+    width: 100%; 
+    background-image: url('https://wallpapersmug.com/download/1920x1080/ddcbbf/food-pizza-baking.jpg'); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height: calc(100% - 51px);
+    overflow: hidden;
+}
+
+.header-text {
+    border-radius: 10px;
+    background-color: #63B7B7;
+    width: 65%;
+    margin: 0 auto;
+    position: relative;
+    font-weight: bold;
+    font-size: 30pt;
+    text-align: center;
+    padding-top: 30px;
+    padding: 20px;
+}

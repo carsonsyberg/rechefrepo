@@ -1,0 +1,5 @@
+Meeting 1 (9/17/21):
+	Discussed Recipe Website with TA, got the ok to continue
+	Discussed using angular or possibly react for the front end
+	Discussed using django, or springboot, or flask for the backend
+	TA said ideas were acceptable, suggested ensuring our software stack was used in industry

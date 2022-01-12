@@ -1,0 +1,11 @@
+Springboot with angular:
+https://www.youtube.com/watch?v=Gx4iBLKLVHk
+
+Using Draw.io for wireframes:
+https://app.diagrams.net/
+
+stuff to look up:
+Back End: SpringBoot, JPA, SQL queries
+
+Frontend:
+hmtl, css, typescript and javascript

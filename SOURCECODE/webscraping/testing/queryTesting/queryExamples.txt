@@ -1,0 +1,12 @@
+Here are some example Queries:
+
+Generally we will build up the query from user input:
+    -spell check each word from food.txt
+    -create paramaterized springboot query
+
+Then we can do queries as such using regular expressions/pattern matching:
+(https://www.w3schools.com/sql/sql_like.asp)
+
+>> select name from recipe where ingredients like '%flour%' and ingredients like '%salt%' and ingredients like '%pepper%';
+
+>> select name from recipe where ingredients like '%ham%' and ingredients like '%cheese%' ;

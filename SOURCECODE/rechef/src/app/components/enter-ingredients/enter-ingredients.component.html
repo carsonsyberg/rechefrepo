@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="home-container">
+<div class="enter-ingredients-container">
+    <div class="enter-ingredients-form">
+      <h2 class="ingredients-heading">Enter Your Ingredients:</h2>
+      <p>(Put each ingredient on a new line)</p>
+      <hr>
+      <div class="textbox">
+        <div class="cc">
+          <textarea rows="3" id="ingredients" class="ingredients" type="text" placeholder="Ingredient Name..."></textarea>
+        </div>
+      </div> 
+      <button type="button" class="btn btn-dark" (click)="enterIngredient();">Submit</button>
+      
+      <div *ngIf="recipes">
+        <hr>
+        <h2 *ngIf="noneFound">
+          No recipes found.
+        </h2>
+        <div *ngFor="let recipe of recipes;">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">{{recipe.name}}</h5>
+              <img class="card-img-top" src="{{recipe.imageurl}}" alt="Card image cap">
+              <p class="card-text">
+                <a href="{{recipe.url}}">Link to Recipe</a>
+                
+              </p>
+              
+              <div *ngIf="recipe.showSteps; else elseBlock;">
+                <div *ngFor="let instruc of recipe.instructions;">
+                  <li class='instruction'>{{instruc}}</li>
+                </div>
+                <button type="button" class="btn btn-dark" (click)="recipe.showSteps=!recipe.showSteps;">Hide Instructions</button>
+              </div>
+              <ng-template #elseBlock>
+                <button type="button" class="btn btn-dark" (click)="recipe.showSteps=!recipe.showSteps;">Show Instructions</button>
+              </ng-template>
+
+              <hr>
+
+              <h4 style="text-align: center;">Ingredients</h4>
+
+              <div *ngFor="let ingred of recipe.ingredients;">
+                <li class='ingredi'>{{ingred}}</li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+    </div>
+  
+  </div>
+</div>

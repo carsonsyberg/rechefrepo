@@ -1,0 +1,9 @@
+These Articles explain how springboot and specifically JPA has built in sql injection attack prevention. You just need to ensure that you do not pass the strings directly in the sql queries but instead use the paramaterized queries built into jpa.
+
+- https://www.javatpoint.com/spring-boot-jpa
+- https://www.baeldung.com/sql-injection
+- https://www.adam-bien.com/roller/abien/entry/preventing_injection_in_jpa_query
+
+
+
+

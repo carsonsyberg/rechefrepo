@@ -1,0 +1,33 @@
+  <title>Featured Recipes</title>
+
+  <div class="wrapper">
+      
+      <section class="top-container">
+        <header class="showcase">
+            <div class="card maincard">          <h2 class = "title"> Featured Recipes</h2>
+          <p class="showcase-description">
+            Welcome to the featured recipes page. Browse the most popular recipes on the web
+          </p>
+        </div>
+
+        </header>
+      </section>
+    
+    <div *ngIf="recipes">
+        <section class="recipe-boxes"> 
+        <div *ngFor="let recipe of recipes;">
+            <div class="box">
+                <img src="{{recipe.imageurl}}" style="height: 120px;">
+                <hr>
+                <div>
+                  <h2>{{recipe.name}}</h2>
+                </div>
+                <!-- <p>{{recipe.rating}}</p> -->
+                <a href="{{recipe.url}}" class="btn">View Recipe</a>
+            </div>
+        </div>
+        </section>
+    </div>
+        
+    </div>
+    <!-- end of wrapper -->

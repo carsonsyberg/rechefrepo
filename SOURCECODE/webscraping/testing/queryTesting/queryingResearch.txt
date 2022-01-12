@@ -1,0 +1,96 @@
+This file contains research that is being relied on to write the queries for recipes from db given the users ingredients:
+
+
+Efficiently Match direct words:
+
+	search large string for words:
+	https://stackoverflow.com/questions/26739267/how-to-efficiently-check-if-a-given-string-contains-words-from-an-array
+
+	move data from json schema to database directly:
+	https://www.red-gate.com/simple-talk/homepage/transferring-data-with-json-in-sql-server/
+
+	full text index
+	https://www.mysqltutorial.org/activating-full-text-searching.aspx
+
+	full text index
+	https://docs.microsoft.com/en-us/sql/relational-databases/search/create-and-manage-full-text-indexes?view=sql-server-ver15
+	
+How to search for terms that are slightly different (fuzzy query) to account for mispellings and differences in ingredient presentation:
+
+	Doing fuzzy search to account for mispellings, mutiple spellings, and dialect differences (for tsql but similar enough)
+	https://www.red-gate.com/simple-talk/databases/sql-server/t-sql-programming-sql-server/fuzzy-searches-sql-server/
+	
+	Metaphone in Sql (sound alike)
+	https://www.red-gate.com/simple-talk/blogs/string-comparisons-sql-metaphone-algorithm/
+	
+	We could also use some form of pattern matching with wild cards to look for similar terms:
+	https://dev.mysql.com/doc/mysql-tutorial-excerpt/5.7/en/pattern-matching.html
+	
+	Another Pattern Matching with Regex Resource:
+	https://www.oreilly.com/library/view/mysql-cookbook/0596001452/ch04s08.html
+	
+	Interesesting Resource
+	http://norvig.com/spell-correct.html
+
+
+I am currently testing these on my machine with our test data to determine efficiency and ease of writing, I will push the working queries shortly.
+
+
+
+Some Examples with java spellcheck:
+gigabyte:/queryTesting$ java Spelling peper
+peper
+gigabyte:/queryTesting$ java Spelling sat
+salt
+gigabyte:/queryTesting$ java Spelling cayene
+cayenne
+gigabyte:/queryTesting$ 
+
+
+
+Some Examples From the spellcheck function Python:
+gigabyte:/queryTesting$ python3 spell.py correction "garlic"
+garlic
+gigabyte:/queryTesting$ python3 spell.py correction "garlc"
+garlic
+gigabyte:/queryTesting$ python3 spell.py correction "cheese"
+cheese
+gigabyte:/queryTesting$ python3 spell.py correction "win"
+wine
+gigabyte:/queryTesting$ python3 spell.py correction "chese"
+cheese
+gigabyte:/queryTesting$ python3 spell.py correction "chesse"
+cheese
+gigabyte:/queryTesting$ python3 spell.py correction "ha"
+ham
+gigabyte:/queryTesting$ python3 spell.py correction "lemo"
+lemon
+gigabyte:/queryTesting$ python3 spell.py correction "vanil"
+vanilla
+gigabyte:/queryTesting$ python3 spell.py correction "oi"
+oil
+gigabyte:/queryTesting$ python3 spell.py correction "ol"
+oil
+gigabyte:/queryTesting$ python3 spell.py correction "parsly"
+parsley
+gigabyte:/queryTesting$ python3 spell.py correction "parly"
+parsley
+gigabyte:/queryTesting$ python3 spell.py correction "paresy"
+parsley
+gigabyte:/queryTesting$ ls
+big.txt  food.txt  queryingResearch.txt  spell.py
+gigabyte:/queryTesting$ code queryingResearch.txt 
+gigabyte:/queryTesting$ python3 spell.py correction "egs"
+egg
+gigabyte:/queryTesting$ python3 spell.py correction "eggs"
+eggs
+gigabyte:/queryTesting$ python3 spell.py correction "es"
+s
+gigabyte:/queryTesting$ python3 spell.py correction "sorbet"
+sorbet
+gigabyte:/queryTesting$ python3 spell.py correction "sorbt"
+sorbet
+gigabyte:/queryTesting$ python3 spell.py correction "srbt"
+salt
+gigabyte:/queryTesting$ 
+
